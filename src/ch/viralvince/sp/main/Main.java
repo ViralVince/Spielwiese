@@ -25,7 +25,7 @@ public class Main {
 //	}
 //	
 //	
-//G
+//
 //	private static int ggt(int zahl1, int zahl2) {
 //		   while (zahl2 != 0) {
 //		     if (zahl1 > zahl2) {
@@ -40,8 +40,6 @@ public class Main {
 //
 //		 public static void main(String[] args) {
 //			 
-////		   int ersteZahl = 20;
-////		   int zweiteZahl = 10;
 //			 System.out.println("GGT Rechner");
 //			 	Scanner Eingabe = new Scanner(System.in);                                                
 //				System.out.println("Zahl1?"); 				
