@@ -23,8 +23,7 @@ public class Main {
 //	System.out.println("Das Ergebnis ist " + e);
 //		Eingabe.close();
 //	}
-//	
-//	
+//		
 //
 //	private static int ggt(int zahl1, int zahl2) {
 //		   while (zahl2 != 0) {
