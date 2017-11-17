@@ -23,36 +23,35 @@ public class Main {
 //	System.out.println("Das Ergebnis ist " + e);
 //		Eingabe.close();
 //	}
-//		
-//
-//	private static int ggt(int zahl1, int zahl2) {
-//		   while (zahl2 != 0) {
-//		     if (zahl1 > zahl2) {
-//		       zahl1 = zahl1 - zahl2;
-//		     } else {
-//		       zahl2 = zahl2 - zahl1;
-//		     }
-//		   }
-//		   return zahl1;
-//		 }
-//
-//
-//		 public static void main(String[] args) {
-//			 
-//			 System.out.println("GGT Rechner");
-//			 	Scanner Eingabe = new Scanner(System.in);                                                
-//				System.out.println("Zahl1?"); 				
-//				System.out.println("Zahl2?"); 
-//				String arg1 = Eingabe.next();
-//				Integer zahl1 = Integer.valueOf(arg1);
-//				String arg2 = Eingabe.next();
-//				Integer zahl2 = Integer.valueOf(arg2);
-//
-//		   int ergebnis = ggt(zahl1, zahl2);
-//
-//		   System.out.println("Der GGT von "  + zahl1 +
-//		       " und " + zahl2 + " ist: " + ergebnis);
-//		 }
+
+/*	private static int ggt(int zahl1, int zahl2) {
+		   while (zahl2 != 0) {
+		     if (zahl1 > zahl2) {
+		       zahl1 = zahl1 - zahl2;
+		     } else {
+		       zahl2 = zahl2 - zahl1;
+		     }
+		   }
+		   return zahl1;
+		 }
+
+
+		 public static void main(String[] args) {
+			 
+			 System.out.println("GGT Rechner");
+			 	Scanner Eingabe = new Scanner(System.in);                                                
+				System.out.println("Zahl1?"); 				
+				System.out.println("Zahl2?"); 
+				String arg1 = Eingabe.next();
+				Integer zahl1 = Integer.valueOf(arg1);
+				String arg2 = Eingabe.next();
+				Integer zahl2 = Integer.valueOf(arg2);
+
+		   int ergebnis = ggt(zahl1, zahl2);
+
+		   System.out.println("Der GGT von "  + zahl1 +
+		       " und " + zahl2 + " ist: " + ergebnis);
+		 }*/
 	public static void main(String args[]){
 		int a;
 		int b;
@@ -85,5 +84,13 @@ public class Main {
 				lcm = (a*b)/y;
 		System.out.println("das kgV von "+a+" und "+b+" ist "+lcm);
 	}
+	
+	public void zahl() {
+		System.out.println("");
+		Scanner sc = new Scanner(System.in);
+		a = sc.nextInt();
+		b = sc.nextInt();
+		
+		}
 }
 
