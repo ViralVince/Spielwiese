@@ -2,95 +2,69 @@ package ch.viralvince.sp.main;
 
 import java.util.Scanner;
 
+
+
 public class Main {
-
-//	public static void main (String[] args) {
-//		System.out.println("Aretmetische Reie");
-//		Scanner Eingabe = new Scanner(System.in);                                                
-//		System.out.println("Zahl?"); 
-//		String zahl = Eingabe.next();
-//		Integer x = Integer.valueOf(zahl);
-//		Integer e = 0;
-//		Integer j = 0;
-//		for(int i=1; i<x+1; i++) {
-//			j = j+2;
-//			e = e+j-1;
-//		int rarityRandom = (int) (Math.random() * 2);
-//		System.out.println(rarityRandom);
-//		}
-//		
-//		
-//	System.out.println("Das Ergebnis ist " + e);
-//		Eingabe.close();
-//	}
-
-/*	private static int ggt(int zahl1, int zahl2) {
-		   while (zahl2 != 0) {
-		     if (zahl1 > zahl2) {
-		       zahl1 = zahl1 - zahl2;
-		     } else {
-		       zahl2 = zahl2 - zahl1;
-		     }
-		   }
-		   return zahl1;
-		 }
-
-
-		 public static void main(String[] args) {
-			 
-			 System.out.println("GGT Rechner");
-			 	Scanner Eingabe = new Scanner(System.in);                                                
-				System.out.println("Zahl1?"); 				
-				System.out.println("Zahl2?"); 
-				String arg1 = Eingabe.next();
-				Integer zahl1 = Integer.valueOf(arg1);
-				String arg2 = Eingabe.next();
-				Integer zahl2 = Integer.valueOf(arg2);
-
-		   int ergebnis = ggt(zahl1, zahl2);
-
-		   System.out.println("Der GGT von "  + zahl1 +
-		       " und " + zahl2 + " ist: " + ergebnis);
-		 }*/
-	public static void main(String args[]){
-		int a;
-		int b;
-		int r;
-		int x=0;
-		int y=0;
-		int lcm;
- 
- 
- 
-		System.out.println("Geben Sie die Zahlen a,b ein," +
-		 "von denen Sie das kgV ermitteln wollen");
- 
-		Scanner sc = new Scanner(System.in);
-		a = sc.nextInt();
-		b = sc.nextInt();
- 
-		r=a%b;
- 
-		while(r>0){
-			x=b;
-			y=r;
- 
-			r=x%y;
-		}
- 
-		 if(a==b)
-				lcm=a*b;
-			else
-				lcm = (a*b)/y;
-		System.out.println("das kgV von "+a+" und "+b+" ist "+lcm);
+	
+	
+	static int[] a = new int[6];
+	static int[] b = new int[6];
+	
+	public static void scan(){
+		System.out.println("Geben sie 6 Zahlen ein");
+		 
+				Scanner sc = new Scanner(System.in);
+				 a[0] = sc.nextInt();
+				 a[1] = sc.nextInt();
+				 a[2] = sc.nextInt();
+				 a[3] = sc.nextInt();
+				 a[4] = sc.nextInt();
+				 a[5] = sc.nextInt();
+				 sc.close();
+		 
 	}
 	
-	public void zahl() {
-		System.out.println("");
-		Scanner sc = new Scanner(System.in);
-		a = sc.nextInt();
-		b = sc.nextInt();
-		
+	public static void compare(int[] f, int x, int u, int v) {
+		if(u < v) {
+			f[x] = u;
+			f[x+1] = v;
+		} else {
+			f[x] = v;
+			f[x+1] = u;
 		}
+	}
+	
+	public static void sort(){
+		compare(b, 0, a[0], a[1]);
+		compare(b, 2, a[2], a[3]);
+		compare(b, 4, a[4], a[5]);
+		//neue Zeile
+		compare(a, 0, b[0], b[2]);
+		compare(a, 2, b[1], b[4]);
+		compare(a, 4, b[3], b[5]);
+		//neue Zeile
+		compare(b, 0, a[0], a[2]);
+		compare(b, 2, a[1], a[4]);
+		compare(b, 4, a[3], a[5]);
+		//neue Zeile
+		compare(a, 1, b[1], b[2]);
+		compare(a, 3, b[3], b[4]);
+		//neue Zeile
+		compare(b, 2, a[2], a[3]);
+		a[0] = b[0];
+		a[2] = b[2];
+		a[3] = b[3];
+		a[5] = b[5];
+		
+	
+	}
+	
+	public static void main(String[] args){
+		Main.scan();
+		Main.sort();
+		System.out.println("Das Ergebnis lautet:");
+		for(int l = 0; l != 6; l++) {
+			System.out.println(a[l]);
+		}
+	}
 }
-
