@@ -11,7 +11,7 @@ public class Main {
 	static int[] b = new int[6];
 	
 	public static void scan(){
-		System.out.println("Geben sie 6 Zahlen ein");
+		System.out.println("Geben Sie 6 Zahlen ein");
 		 
 				Scanner sc = new Scanner(System.in);
 				 a[0] = sc.nextInt();
