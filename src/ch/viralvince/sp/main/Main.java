@@ -1,5 +1,8 @@
 package ch.viralvince.sp.main;
 
+import java.io.IOException;
+import java.net.InetAddress;
+import java.net.UnknownHostException;
 import java.util.Scanner;
 
 
@@ -59,6 +62,24 @@ public class Main {
 	
 	}
 	
+	public static  void checkHosts(String subnet){
+		   int timeout=1000;
+		   for (int i=1;i<255;i++){
+		       String host=subnet + "." + i;
+		       try {
+				if (InetAddress.getByName(host).isReachable(timeout)){
+				       System.out.println(host + " is reachable");
+				   }
+			} catch (UnknownHostException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			} catch (IOException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
+		   }
+		}
+	
 	public static void main(String[] args){
 //			Main.scan();
 //			Main.sort();
@@ -67,7 +88,7 @@ public class Main {
 //				System.out.println(a[l]);
 //			}
 		Primzahlen pr = new Primzahlen();
-		
+		//checkHosts("212.51.131.250");
 		pr.prüfeZahl(5);
 			
 		

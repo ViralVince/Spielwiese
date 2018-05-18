@@ -8,12 +8,15 @@ public class Primzahlen {
 		while(b == false) {
 			if(i%c==0) {
 				if(i!=c) {
+					
 					b = true;
 					System.out.println("JA");
 				} else {
 					System.out.println("NEIN");
+				} if(c>=i) {
+					break;
 				}
-			} else {
+			
 				c++;
 			}
 		}
