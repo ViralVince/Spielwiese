@@ -60,11 +60,16 @@ public class Main {
 	}
 	
 	public static void main(String[] args){
-		Main.scan();
-		Main.sort();
-		System.out.println("Das Ergebnis lautet:");
-		for(int l = 0; l != 6; l++) {
-			System.out.println(a[l]);
+//			Main.scan();
+//			Main.sort();
+//			System.out.println("Das Ergebnis lautet:");
+//			for(int l = 0; l != 6; l++) {
+//				System.out.println(a[l]);
+//			}
+		Primzahlen pr = new Primzahlen();
+		
+		pr.prüfeZahl(5);
+			
 		}
 	}
 }

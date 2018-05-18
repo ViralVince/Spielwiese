@@ -2,16 +2,16 @@ package ch.viralvince.sp.main;
 
 public class Primzahlen {
 	
-	public boolean prüfeZahl(int i) {
+	public void prüfeZahl(int i) {
 		boolean b= false;
 		int c=2;
 		while(b == false) {
 			if(i%c==0) {
 				if(i!=c) {
 					b = true;
-					return true;
+					System.out.println("JA");
 				} else {
-					return false
+					System.out.println("NEIN");
 				}
 			}
 		}
