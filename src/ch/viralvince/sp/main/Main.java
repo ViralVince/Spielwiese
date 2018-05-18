@@ -70,6 +70,6 @@ public class Main {
 		
 		pr.prüfeZahl(5);
 			
-		}
+		
 	}
 }
