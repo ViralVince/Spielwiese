@@ -13,6 +13,8 @@ public class Primzahlen {
 				} else {
 					System.out.println("NEIN");
 				}
+			} else {
+				c++;
 			}
 		}
 			
